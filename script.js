@@ -165,11 +165,15 @@ function fce() {
 
 function fbackspace() {
     str = document.getElementById("input").value;
+    strmem = document.getElementById("duplicateField").value;
     if (str.length > 0) {
         str = str.substr(1);
+        strmem = strmem.substr(1);
         document.getElementById("input").value = str;
+        document.getElementById("duplicateField").value = strmem;
     } else {
         str = '';
+        strmem = '';
     }
 }
 
